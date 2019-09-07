@@ -1,16 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('STage1') {
+    stage('Stage1') {
       parallel {
         stage('Stage1') {
           steps {
             echo 'Hello PipeLine1'
           }
         }
-        stage('Stage2') {
+        stage('') {
           steps {
-            build(job: 'java', quietPeriod: 1)
+            echo 'Stage2 job'
           }
         }
       }
