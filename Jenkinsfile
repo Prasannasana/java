@@ -8,7 +8,7 @@ pipeline {
             echo 'Hello PipeLine1'
           }
         }
-        stage('') {
+        stage('Haha') {
           steps {
             echo 'Stage2 job'
           }
