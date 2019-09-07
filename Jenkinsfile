@@ -16,8 +16,17 @@ pipeline {
       }
     }
     stage('Stage3') {
-      steps {
-        sleep 5
+      parallel {
+        stage('Stage3') {
+          steps {
+            sleep 5
+          }
+        }
+        stage('PrintMsg') {
+          steps {
+            echo 'haha2'
+          }
+        }
       }
     }
   }
